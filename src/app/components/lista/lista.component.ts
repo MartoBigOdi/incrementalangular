@@ -17,4 +17,18 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  mostrarTareas(){
+    let resultado = '<ul>';
+
+    for(let tarea of this.tareas){
+      resultado += `<li>${tarea.titulo} <br> 
+      ${tarea.descripcion} </li>`;
+    }
+
+    resultado += '</ul>';
+    return resultado;
+  }
+
+
 }
